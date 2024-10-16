@@ -77,7 +77,7 @@ vividas en el<br>camino.</strong>
 <input type="radio" id="sexo1" name="opcion"><label for="sexo1">Hombre</label>
 <input type="radio" id="sexo2" name="opcion"><label for="sexo2">Mujer</label>
 <input type="radio" id="sexo3" name="opcion"><label for="sexo3">Personalizado</label>
- 
+ <br><br>
 <label>Pais:</label>
 <select name="" id="">
 <option value="Alemania">Alemania</option>
@@ -149,6 +149,14 @@ p{
 .navbar a:hover{
     background-color: blue;/*Cambial el color de fondo al pasar el ouse encima*/
 } 
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed; /* Mantiene el navbar fijo */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
 .auto{
     color: blue;
 }
