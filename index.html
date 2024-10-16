@@ -67,11 +67,11 @@ vividas en el<br>camino.</strong>
     <div class="Registro">
 <h3>Registrarse</h3>
 <label for="usuario1">Nombre:</label>
-<input type="text" placeholder="Introduzca nombre" id="usuario1" title="Usuario">
+<input class="texto" type="text" placeholder="Introduzca nombre" id="usuario1" title="Usuario">
 <label for="usuario1">Contraseña:</label>
-<input type="password" placeholder="Introduzca contraseña" id="contraseña1" title="Contraseña">
+<input class="Contrasenia" type="password" placeholder="Introduzca contraseña" id="contraseña1" title="Contraseña">
 <label for="Email">Email:</label>
-<input type="email" placeholder="Introduzca Email" id="Email" title="Email">
+<input class="email1" type="email" placeholder="Introduzca Email" id="Email" title="Email">
 </div> 
 <label>Sexo:</label>
 <input type="radio" id="sexo1" name="opcion"><label for="sexo1">Hombre</label>
@@ -152,7 +152,7 @@ p{
 .navbar {
     background-color: #333;
     overflow: hidden;
-    position: fixed; /* Mantiene el navbar fijo */
+    transition: top 0.3s; /* Transición suave al cambiar la posición */
     top: 0; /* Posición en la parte superior */
     width: 100%; /* Ancho completo */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
@@ -225,13 +225,13 @@ p{
     display: flex;
    flex-direction: column; 
 }
-.text{
+.texto{
     width: 250px;
 }
-.password{
+.Contrasenia{
     width: 250px;
 }
-.email{
+.email1{
     width: 250px;
 }
 </style>
