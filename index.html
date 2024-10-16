@@ -93,20 +93,6 @@ vividas en el<br>camino.</strong>
 <a class="google" target="blank" href="https://www.google.com" title="Ir a Google">Ir a Google</a>
 <a class="mailto" href="mailto:adriankis35@gmail.com"  title="Enviar Gmail a Adrianky">Enviar Gmail</a>
 </div>
-<script>
-    window.onscroll = function() {stickyNavbar()};
-
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-
-    function stickyNavbar() {
-        if (window.pageYOffset > sticky) {
-            navbar.classList.add("fixed");
-        } else {
-            navbar.classList.remove("fixed");
-        }
-    }
-</script>
 </body>
 <style>
     input[type="submit"]{
@@ -169,15 +155,6 @@ p{
     transition: top 0.3s; /* Transición suave al cambiar la posición */
     width: 100%; /* Ancho completo */
     position: relative;
-    top: 0; /* Se queda fijo en la parte superior */
-}
-.fixed {
-    position: fixed; /* Fija el navbar */
-    top: 0; /* Posición en la parte superior */
-    z-index: 1000; /* Asegura que esté sobre otros elementos */
-}
-.content {
-    padding-top: 60px; /* Espacio para el navbar fijo */
 }
 .auto{
     color: blue;
