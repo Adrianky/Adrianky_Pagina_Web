@@ -9,6 +9,7 @@
 </head>
 
 <body class="body1">
+    <div class="contenedor">
 <h1>Bienvenido a AutoMundo!</h1>
 <h2>Tu destino numero uno para comprar,vender y conocer todo sobre <a class="auto" target="blank" href="https://autos.katapulk.com">autos</a>.</h4>
 <header>
@@ -87,6 +88,7 @@ vividas en el<br>camino.</strong>
 <br><br>
 <a class="google" target="blank" href="https://www.google.com" title="Ir a Google">Ir a Google</a>
 <a class="mailto" href="mailto:adriankis35@gmail.com"  title="Enviar Gmail a Adrianky">Enviar Gmail</a>
+</div>
 </body>
 <style>
     input[type="submit"]{
@@ -166,8 +168,15 @@ p{
     /* Estilos para dispositivos móviles */
     body {
         font-size: 14px;
+        overflow-x: hidden; 
     }
-}
+    .container {
+     width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+          max-width: 600px; /* Limita el ancho máximo si es necesario */
+            margin: 0 auto; /* Centra el contenedor */
+        }
+    }
+
 @media (min-width: 601px) and (max-width: 1200px) {
     body {
         font-size: 16px; /* Aumenta el tamaño de fuente en tabletas y laptops */
