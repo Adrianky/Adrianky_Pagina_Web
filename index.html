@@ -9,7 +9,7 @@
 </head>
 
 <body class="body1">
-    <div class="contenedor">
+    <div class="content">
 <h1>Bienvenido a AutoMundo!</h1>
 <h2>Tu destino numero uno para comprar,vender y conocer todo sobre <a class="auto" target="blank" href="https://autos.katapulk.com">autos</a>.</h4>
 <header>
@@ -153,9 +153,16 @@ p{
     background-color: #333;
     overflow: hidden;
     transition: top 0.3s; /* Transición suave al cambiar la posición */
-    top: 0; /* Posición en la parte superior */
     width: 100%; /* Ancho completo */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    position: -webkit-sticky; /* Para navegadores Safari */
+    position: sticky;
+    top: 0; /* Se queda fijo en la parte superior */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+.content {
+    height: 2000px; /* Solo para crear un scroll */
+    padding: 20px;
 }
 .auto{
     color: blue;
