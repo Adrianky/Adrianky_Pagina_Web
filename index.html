@@ -168,25 +168,22 @@ p{
         font-size: 14px;
     }
 }
-
 @media (min-width: 601px) and (max-width: 1200px) {
-    /* Estilos para tabletas y laptops */
     body {
-        font-size: 16px;
+        font-size: 16px; /* Aumenta el tamaño de fuente en tabletas y laptops */
+    }
+    .campo {
+        width: 80%; /* Ajusta el ancho en pantallas medianas */
     }
 }
-.contraseña {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.usuario {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 
+@media (min-width: 1201px) {
+    body {
+        font-size: 18px; /* Aumenta el tamaño de fuente en pantallas grandes */
+    }
+    .campo {
+        width: 60%; /* Ajusta el ancho en pantallas grandes */
+    }
 }
 </style>
 
