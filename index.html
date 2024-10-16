@@ -71,9 +71,9 @@ vividas en el<br>camino.</strong>
 <label for="usuario1">Contraseña:</label>
 <input type="password" placeholder="Introduzca contraseña" id="contraseña1" title="Contraseña">
 <label for="Email">Email:</label>
-<input type="email" placeholder="Introduzca Email" id="Email" title="Email"> 
+<input type="email" placeholder="Introduzca Email" id="Email" title="Email">
+</div> 
 <label>Sexo:</label>
-</div>
 <input type="radio" id="sexo1" name="opcion"><label for="sexo1">Hombre</label>
 <input type="radio" id="sexo2" name="opcion"><label for="sexo2">Mujer</label>
 <input type="radio" id="sexo3" name="opcion"><label for="sexo3">Personalizado</label>
@@ -179,6 +179,9 @@ p{
           max-width: 600px; /* Limita el ancho máximo si es necesario */
             margin: 0 auto; /* Centra el contenedor */
         }
+        input{
+            background-color:white;
+        }
     }
 
 @media (min-width: 601px) and (max-width: 1200px) {
@@ -213,6 +216,15 @@ p{
     margin-bottom: 15px;
     display: flex;
    flex-direction: column; 
+}
+.text{
+    width: 250px;
+}
+.password{
+    width: 250px;
+}
+.email{
+    width: 250px;
 }
 </style>
 
