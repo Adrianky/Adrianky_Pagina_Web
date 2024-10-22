@@ -30,24 +30,21 @@
     <script>
         const validUsername = "Adrianky";
         const validPassword = "Andis1234";
-
+    
         window.onload = function() {
             checkLoginStatus();
-        
         };
-
+    
         function closePopup() {
-           // Cerrar la ventana de inicio de sesión
-        document.getElementById('loginPopup').style.display = 'none';
-
-    }
-
-
+            // Cerrar la ventana de inicio de sesión
+            document.getElementById('loginPopup').style.display = 'none';
+        }
+    
         function validateLogin(event) {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('errorMessage');
-
+    
             if (username === validUsername && password === validPassword) {
                 errorMessage.textContent = "Inicio de sesión exitoso";
                 errorMessage.className = "success";
@@ -60,7 +57,7 @@
                 return false;
             }
         }
-
+    
         function checkLoginStatus() {
             if (!sessionStorage.getItem('loggedIn')) {
                 document.getElementById('loginPopup').style.display = 'block';
@@ -68,15 +65,29 @@
                 document.getElementById('loginPopup').style.display = 'none';
             }
         }
-        function closePage() {
-            window.open('', '_self', '');
-            window.close();
-        }
+    
+        document.getElementById('loginButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            if (validateLogin(event)) {
+                window.open('', '_self', '');
+                window.close();
+            }
+        });
     
         document.getElementById('closeButton').addEventListener('click', function() {
-            closePage();
+            closePopup();
+            // Redirigir al usuario a la ventana de inicio de sesión si no está autenticado
+            if (!sessionStorage.getItem('loggedIn')) {
+                document.getElementById('loginPopup').style.display = 'block';
+            }
         });
+    
+        // Redirigir al usuario a la ventana de inicio de sesión si intenta acceder a la página sin estar autenticado
+        if (!sessionStorage.getItem('loggedIn')) {
+            document.getElementById('loginPopup').style.display = 'block';
+        }
     </script>
+    
         <div class="content">
 <h1>Bienvenido a AutoMundo!</h1>
 <h2>Tu destino número uno para comprar,vender y conocer todo sobre <a class="auto" target="blank" href="https://autos.katapulk.com">autos</a>.</h4>
