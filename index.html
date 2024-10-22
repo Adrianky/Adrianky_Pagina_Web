@@ -33,23 +33,14 @@
             checkLoginStatus();
         
             window.addEventListener('beforeunload', function (e) {
-    
-                if (!sessionStorage.getItem('loggedIn')) {
-                    e.preventDefault();
-                    e.returnValue = '';
-                }
             });
         };
 
         function closePopup() {
-            document.getElementById('loginPopup').style.display = 'none';
-                  // Intentamos cerrar la página web automáticamente
-                if (navigator.userAgent.indexOf("Edge") > -1) {
-                    window.open('', '_self').close();
-                } else {
-                    window.open('', '_self', '');
-                    window.close();
-                }
+            function closePopup() {
+                // Cerrar la página web automáticamente
+                window.open('', '_self').close();
+            }
             }
 
         function validateLogin(event) {
