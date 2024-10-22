@@ -26,12 +26,30 @@
     <!--Java Script-->
     <script>
         // JavaScript
+        const validUsername = "usuario"; // Usuario válido
+        const validPassword = "contraseña"; // Contraseña válida
+
         window.onload = function() {
-            document.getElementById('loginPopup').style.display = 'block';
+            document.getElementById('loginPopup').style.display = 'block'; // Muestra la ventana emergente al cargar la página
         };
 
         function closePopup() {
-            document.getElementById('loginPopup').style.display = 'none';
+            document.getElementById('loginPopup').style.display = 'none'; // Cierra la ventana emergente
+        }
+
+        function validateLogin() {
+            const username = document.getElementById('username').value; // Obtiene el valor del campo de usuario
+            const password = document.getElementById('password').value; // Obtiene el valor del campo de contraseña
+            const errorMessage = document.getElementById('errorMessage'); // Obtiene el contenedor del mensaje de error
+
+            if (username === validUsername && password === validPassword) {
+                alert("Inicio de sesión exitoso"); // Muestra un mensaje de éxito
+                closePopup(); // Cierra la ventana emergente
+                return true; // Permite el envío del formulario
+            } else {
+                errorMessage.textContent = "Credenciales inválidas"; // Muestra un mensaje de error
+                return false; // Evita el envío del formulario
+            }
         }
     </script>
 
@@ -139,6 +157,9 @@ vividas en el<br>camino.</strong>
 input[type="text"] {
     margin-bottom: 20px; /* Aumenta el espacio debajo del campo de usuario */
 }
+input[type="password"] {
+    margin-bottom: 20px; /* Aumenta el espacio debajo del campo de contraseña */
+}
 input[type="text"],
 input[type="password"] {
     width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
@@ -158,6 +179,10 @@ input[type="password"] {
     color: black; /* Color del botón al pasar el ratón o enfocar */
     text-decoration: none; /* Sin subrayado */
     cursor: pointer; /* Cambia el cursor a una mano */
+}
+.error {
+    color: red; /* Color del mensaje de error */
+    margin-top: 10px; /* Espacio encima del mensaje de error */
 }
 
     input[type="submit"]{
