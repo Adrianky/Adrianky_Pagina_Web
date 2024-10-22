@@ -33,8 +33,9 @@
             checkLoginStatus();
             window.addEventListener('beforeunload', function (e) {
                 if (!sessionStorage.getItem('loggedIn')) {
-                    e.preventDefault();
-                    e.returnValue = '';
+                    // Eliminar la prevención del cierre de la página
+                    // e.preventDefault();
+                    // e.returnValue = '';
                 }
             });
         };
@@ -43,7 +44,7 @@
             document.getElementById('loginPopup').style.display = 'none';
         }
 
-        function validateLogin() {
+        function validateLogin(event) {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('errorMessage');
