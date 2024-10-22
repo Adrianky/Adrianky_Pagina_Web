@@ -28,39 +28,42 @@
     <!--Java Script-->
     <script>
         // JavaScript
-        const validUsername = "Adrianky"; // Usuario válido
-        const validPassword = "Andis1234"; // Contraseña válida
+      // JavaScript
+const validUsername = "Adrianky"; // Usuario válido
+const validPassword = "Andis1234"; // Contraseña válida
 
-        window.onload = function() {
-            checkLoginStatus(); // Verifica el estado de inicio de sesión al cargar la página
-        };
+window.onload = function() {
+    checkLoginStatus(); // Verifica el estado de inicio de sesión al cargar la página
+};
 
-        function closePopup() {
-            document.getElementById('loginPopup').style.display = 'none'; // Cierra la ventana emergente
-        }
+function closePopup() {
+    document.getElementById('loginPopup').style.display = 'none'; // Cierra la ventana emergente
+    window.close(); // Cierra la página principal
+}
 
-        function validateLogin() {
-            const username = document.getElementById('username').value; // Obtiene el valor del campo de usuario
-            const password = document.getElementById('password').value; // Obtiene el valor del campo de contraseña
+function validateLogin() {
+    const username = document.getElementById('username').value; // Obtiene el valor del campo de usuario
+    const password = document.getElementById('password').value; // Obtiene el valor del campo de contraseña
 
-            if (username === validUsername && password === validPassword) {
-                alert("Inicio de sesión exitoso"); // Muestra un mensaje de éxito
-                sessionStorage.setItem('loggedIn', true); // Guarda el estado de inicio de sesión
-                closePopup(); // Cierra la ventana emergente
-                return true; // Permite el envío del formulario
-            } else {
-                alert("Credenciales inválidas"); // Muestra un mensaje de error en una ventana emergente
-                return false; // Evita el envío del formulario
-            }
-        }
+    if (username === validUsername && password === validPassword) {
+        alert("Inicio de sesión exitoso"); // Muestra un mensaje de éxito
+        sessionStorage.setItem('loggedIn', true); // Guarda el estado de inicio de sesión
+        document.getElementById('loginPopup').style.display = 'none'; // Cierra la ventana emergente
+        return true; // Permite el envío del formulario
+    } else {
+        alert("Credenciales inválidas"); // Muestra un mensaje de error en una ventana emergente
+        return false; // Evita el envío del formulario
+    }
+}
 
-        function checkLoginStatus() {
-            if (!sessionStorage.getItem('loggedIn')) { // Verifica si el usuario ya ha iniciado sesión
-                document.getElementById('loginPopup').style.display = 'block'; // Muestra la ventana emergente si no ha iniciado sesión
-            } else {
-                document.getElementById('loginPopup').style.display = 'none'; // Oculta la ventana emergente si ya ha iniciado sesión
-            }
-        }
+function checkLoginStatus() {
+    if (!sessionStorage.getItem('loggedIn')) { // Verifica si el usuario ya ha iniciado sesión
+        document.getElementById('loginPopup').style.display = 'block'; // Muestra la ventana emergente si no ha iniciado sesión
+    } else {
+        document.getElementById('loginPopup').style.display = 'none'; // Oculta la ventana emergente si ya ha iniciado sesión
+    }
+}
+
     </script>
     <div class="content">
 <h1>Bienvenido a AutoMundo!</h1>
