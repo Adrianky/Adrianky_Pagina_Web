@@ -94,12 +94,18 @@
             document.getElementById("sidebar").classList.remove("open");  
         });  
         
-        // Si deseas cerrar la barra lateral al hacer clic en cualquier parte fuera de ella  
+        // Cerrar la barra lateral al hacer clic fuera de ella  
         window.addEventListener('click', function(event) {  
-            if (!document.getElementById("sidebar").contains(event.target) && !document.getElementById("loginBtn").contains(event.target)) {  
-                document.getElementById("sidebar").classList.remove("open");  
+            const sidebar = document.getElementById("sidebar");  
+            const loginBtn = document.getElementById("loginBtn");  
+            if (!sidebar.contains(event.target) && !loginBtn.contains(event.target)) {  
+                sidebar.classList.remove("open");  
             }  
-        });  
+        });
+        document.getElementById("loginBtn").addEventListener("click", function() {  
+            console.log('Botón de iniciar sesión clickeado'); // Verifica que este mensaje se muestre en la consola  
+            document.getElementById("sidebar").classList.toggle("open");  
+        });
     </script>
     
         <div class="content">
@@ -404,6 +410,12 @@ p{
     height: 20px;
 }
 
+#loginBtn {  
+    margin: 20px;  
+    padding: 10px 20px;  
+    cursor: pointer;  
+}  
+
 .sidebar {  
     position: fixed;  
     width: 300px;  
@@ -426,6 +438,7 @@ p{
     font-size: 24px;  
     cursor: pointer;  
 }  
+
 form {  
     display: flex;  
     flex-direction: column;  
