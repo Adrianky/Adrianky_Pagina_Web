@@ -28,13 +28,11 @@
     <!--Java Script-->
     <script>
         // JavaScript
-        const validUsername = "usuario"; // Usuario válido
-        const validPassword = "contraseña"; // Contraseña válida
+        const validUsername = "Adrianky"; // Usuario válido
+        const validPassword = "Andis1234"; // Contraseña válida
 
         window.onload = function() {
-            if (!sessionStorage.getItem('loggedIn')) { // Verifica si el usuario ya ha iniciado sesión
-                document.getElementById('loginPopup').style.display = 'block'; // Muestra la ventana emergente al cargar la página
-            }
+            checkLoginStatus(); // Verifica el estado de inicio de sesión al cargar la página
         };
 
         function closePopup() {
@@ -53,6 +51,14 @@
             } else {
                 alert("Credenciales inválidas"); // Muestra un mensaje de error en una ventana emergente
                 return false; // Evita el envío del formulario
+            }
+        }
+
+        function checkLoginStatus() {
+            if (!sessionStorage.getItem('loggedIn')) { // Verifica si el usuario ya ha iniciado sesión
+                document.getElementById('loginPopup').style.display = 'block'; // Muestra la ventana emergente si no ha iniciado sesión
+            } else {
+                document.getElementById('loginPopup').style.display = 'none'; // Oculta la ventana emergente si ya ha iniciado sesión
             }
         }
     </script>
