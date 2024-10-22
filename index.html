@@ -85,6 +85,21 @@
         if (!sessionStorage.getItem('loggedIn')) {
             document.getElementById('loginPopup').style.display = 'block';
         }
+
+        document.getElementById("loginBtn").addEventListener("click", function() {  
+            document.getElementById("sidebar").classList.toggle("open");  
+        });  
+        
+        document.getElementById("closeBtn").addEventListener("click", function() {  
+            document.getElementById("sidebar").classList.remove("open");  
+        });  
+        
+        // Si deseas cerrar la barra lateral al hacer clic en cualquier parte fuera de ella  
+        window.addEventListener('click', function(event) {  
+            if (!document.getElementById("sidebar").contains(event.target) && !document.getElementById("loginBtn").contains(event.target)) {  
+                document.getElementById("sidebar").classList.remove("open");  
+            }  
+        });  
     </script>
     
         <div class="content">
@@ -127,38 +142,31 @@ vividas en el<br>camino.</strong>
 <div class="div2">
 <form>
     <br><br>
-    <div class="Registro">
-<h3>Registrarse</h3>
-<label for="usuario1">Nombre:</label>
-<input class="texto" type="text" placeholder="Introduzca nombre" id="usuario1" title="Usuario">
-<label for="usuario1">Contraseña:</label>
-<input class="Contrasenia" type="password" placeholder="Introduzca contraseña" id="contraseña1" title="Contraseña">
-<label for="Email">Email:</label>
-<input class="email1" type="email" placeholder="Introduzca Email" id="Email" title="Email">
-</div> 
-<label>Sexo:</label>
-<input type="radio" id="sexo1" name="opcion"><label for="sexo1">Hombre</label>
-<input type="radio" id="sexo2" name="opcion"><label for="sexo2">Mujer</label>
-<input type="radio" id="sexo3" name="opcion"><label for="sexo3">Personalizado</label>
- <br><br>
-<label>Pais:</label>
-<select class="pais" name="" id="">
-<option value="Alemania">Alemania</option>
-<option value="Brasil">Brasil</option>
-<option value="Cuba">Cuba</option>
-<option value="Canadá">Canadá</option>
-</select>
-<br><br>
-<input type="submit" value="Registrarse">
-</form>
-</div>
+    <div class="sidebar" id="sidebar">
+        <button id="closeBtn" class="close-btn">&times;</button>
+        <form id="registerForm">  
+            <label for="username">Usuario:</label>  
+            <input type="text" id="username" name="username" required>  
+            
+            <label for="password">Contraseña:</label>  
+            <input type="password" id="password" name="password" required>  
+            
+            <label for="confirmPassword">Confirmar Contraseña:</label>  
+            <input type="password" id="confirmPassword" name="confirmPassword" required>  
+            
+            <label for="phone">Número de Teléfono:</label>  
+            <input type="tel" id="phone" name="phone" required>  
+            
+            <button type="submit">Registrarse</button>  
+        </form>  
+    </div>  
 <br><br>
 <a class="google" target="blank" href="https://www.google.com" title="Ir a Google">Ir a Google</a>
 <a class="mailto" href="mailto:adriankis35@gmail.com"  title="Enviar Gmail a Adrianky">Enviar Gmail</a>
 </div>
 
 <!--Boton de Registrarse-->
-<button class="register-button" onclick="window.location.href='registro.html'">
+<button id="loginBtn" class="register-button" onclick="window.location.href='registro.html'">
     <img src="https://cdn.icon-icons.com/icons2/2248/PNG/96/login_icon_137429.png" alt="Icono de registro"> <!-- Reemplaza URL_DEL_ICONO con la URL de tu ícono -->
 </button>
 
@@ -395,6 +403,48 @@ p{
     width: 20px;
     height: 20px;
 }
+
+.sidebar {  
+    position: fixed;  
+    width: 300px;  
+    height: 100%;  
+    right: -300px; /* Inicialmente fuera de la pantalla */  
+    top: 0;  
+    background-color: #f4f4f4;  
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);  
+    transition: right 0.3s ease; /* Efecto de transición */  
+    padding: 20px;  
+}  
+
+.sidebar.open {  
+    right: 0; /* Cuando está abierta */  
+}  
+
+.close-btn {  
+    background: none;  
+    border: none;  
+    font-size: 24px;  
+    cursor: pointer;  
+}  
+form {  
+    display: flex;  
+    flex-direction: column;  
+}  
+
+label {  
+    margin-top: 10px;  
+}  
+
+input {  
+    padding: 8px;  
+    margin-top: 5px;  
+}  
+
+button[type="submit"] {  
+    margin-top: 20px;  
+    padding: 10px;  
+    cursor: pointer;  
+}  
 </style>
 
 
