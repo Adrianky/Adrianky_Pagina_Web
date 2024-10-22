@@ -32,10 +32,7 @@
         window.onload = function() {
             checkLoginStatus();
             window.addEventListener('beforeunload', function (e) {
-                if (!sessionStorage.getItem('loggedIn')) {
-                    e.preventDefault();
-                    e.returnValue = '';
-                }
+    
             });
         };
 
