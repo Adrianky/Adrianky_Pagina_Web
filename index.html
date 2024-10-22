@@ -11,67 +11,65 @@
 <body>
 <body class="body1">
 
-    <div id="loginPopup" class="popup"> <!-- Contenedor de la ventana emergente -->
-        <form class="popup-content"> <!-- Contenido del formulario de la ventana emergente -->
-            <span class="close" onclick="closePopup()">&times;</span> <!-- Botón para cerrar la ventana -->
-            <h2>Iniciar Sesión</h2> <!-- Título del formulario -->
-            <label for="username">Usuario:</label> <!-- Etiqueta para el campo de usuario -->
-            <input type="text" id="username" name="username" required> <!-- Campo de entrada para el usuario -->
-            <label for="password">Contraseña:</label> <!-- Etiqueta para el campo de contraseña -->
-            <input type="password" id="password" name="password" required> <!-- Campo de entrada para la contraseña -->
-            <button type="submit">Entrar</button> <!-- Botón para enviar el formulario -->
-            <div id="errorMessage" class="error"></div> <!-- Contenedor para el mensaje de error -->
-
+    <div id="loginPopup" class="popup">
+        <form class="popup-content" onsubmit="return validateLogin()">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Entrar</button>
+            <div id="errorMessage" class="error"></div>
         </form>
     </div>
 
     <!--Java Script-->
     <script>
-        // JavaScript
-      // JavaScript
-const validUsername = "Adrianky"; // Usuario válido
-const validPassword = "Andis1234"; // Contraseña válida
+        const validUsername = "Adrianky";
+        const validPassword = "Andis1234";
 
-window.onload = function() {
-    checkLoginStatus(); // Verifica el estado de inicio de sesión al cargar la página
-    window.addEventListener('beforeunload', function (e) {
-        if (!sessionStorage.getItem('loggedIn')) {
-            e.preventDefault();
-            e.returnValue = ''; // Mensaje de confirmación para cerrar la ventana
+        window.onload = function() {
+            checkLoginStatus();
+            window.addEventListener('beforeunload', function (e) {
+                if (!sessionStorage.getItem('loggedIn')) {
+                    e.preventDefault();
+                    e.returnValue = '';
+                }
+            });
+        };
+
+        function closePopup() {
+            document.getElementById('loginPopup').style.display = 'none';
         }
-    });
-};
 
-function closePopup() {
-    document.getElementById('loginPopup').style.display = 'none'; // Cierra la ventana emergente
-   
-}
+        function validateLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
 
-function validateLogin() {
-    const username = document.getElementById('username').value; // Obtiene el valor del campo de usuario
-    const password = document.getElementById('password').value; // Obtiene el valor del campo de contraseña
+            if (username === validUsername && password === validPassword) {
+                errorMessage.textContent = "Inicio de sesión exitoso";
+                errorMessage.className = "success";
+                sessionStorage.setItem('loggedIn', true);
+                closePopup();
+                return true;
+            } else {
+                errorMessage.textContent = "Credenciales inválidas";
+                errorMessage.className = "error";
+                return false;
+            }
+        }
 
-    if (username === validUsername && password === validPassword) {
-        alert("Inicio de sesión exitoso"); // Muestra un mensaje de éxito
-        sessionStorage.setItem('loggedIn', true); // Guarda el estado de inicio de sesión
-        closePopup(); // Cierra la ventana emergente
-        return true; // Permite el envío del formulario
-    } else {
-        alert("Credenciales inválidas"); // Muestra un mensaje de error en una ventana emergente
-        return false; // Evita el envío del formulario
-    }
-}
-
-function checkLoginStatus() {
-    if (!sessionStorage.getItem('loggedIn')) { // Verifica si el usuario ya ha iniciado sesión
-        document.getElementById('loginPopup').style.display = 'block'; // Muestra la ventana emergente si no ha iniciado sesión
-    } else {
-        document.getElementById('loginPopup').style.display = 'none'; // Oculta la ventana emergente si ya ha iniciado sesión
-    }
-}
-
+        function checkLoginStatus() {
+            if (!sessionStorage.getItem('loggedIn')) {
+                document.getElementById('loginPopup').style.display = 'block';
+            } else {
+                document.getElementById('loginPopup').style.display = 'none';
+            }
+        }
     </script>
-    <div class="content">
+        <div class="content">
 <h1>Bienvenido a AutoMundo!</h1>
 <h2>Tu destino número uno para comprar,vender y conocer todo sobre <a class="auto" target="blank" href="https://autos.katapulk.com">autos</a>.</h4>
 <header>
@@ -143,8 +141,8 @@ vividas en el<br>camino.</strong>
 </body>
 </body>
 
+<!--Codigo CCS-->
 <style>
-
     body{
         font-family: Arial, sans-serif; /* Define la fuente del cuerpo del documento */
 
