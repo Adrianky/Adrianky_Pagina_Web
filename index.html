@@ -34,20 +34,12 @@
         window.onload = function() {
             checkLoginStatus();
         
-            window.addEventListener('beforeunload', function (e) {
-                if (!sessionStorage.getItem('loggedIn')) {
-                    e.preventDefault();
-                    e.returnValue = '';
-                }
-            });
         };
 
         function closePopup() {
            // Cerrar la ventana de inicio de sesión
         document.getElementById('loginPopup').style.display = 'none';
-        // Intentamos cerrar la página web automáticamente
-        window.open('', '_self', '');
-        window.close();
+
     }
 
 
