@@ -44,7 +44,7 @@
         function closePopup() {
             document.getElementById('loginPopup').style.display = 'none';
                   // Intentamos cerrar la página web automáticamente
-                  if (navigator.userAgent.indexOf("Edge") > -1) {
+                if (navigator.userAgent.indexOf("Edge") > -1) {
                     window.open('', '_self').close();
                 } else {
                     window.open('', '_self', '');
