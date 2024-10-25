@@ -1,4 +1,4 @@
-<style>
+
     body{
         font-family: Arial, sans-serif; /* Define la fuente del cuerpo del documento */
 
@@ -195,7 +195,7 @@ p{
 .texto{
     width: 250px;
 }
-.Contrasenia{
+.Contraseña{
     width: 250px;
 }
 .email1{
@@ -271,4 +271,3 @@ button[type="submit"] {
     padding: 10px;  
     cursor: pointer;
 }
-</style>
