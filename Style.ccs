@@ -1,0 +1,274 @@
+<style>
+    body{
+        font-family: Arial, sans-serif; /* Define la fuente del cuerpo del documento */
+
+    }
+
+.popup {
+    display: none; /* Oculta la ventana emergente por defecto */
+    position: fixed; /* Fija la posición de la ventana emergente */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo de la pantalla */
+    height: 100%; /* Alto completo de la pantalla */
+    overflow: auto; /* Permite el desplazamiento si el contenido es grande */
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+    
+}
+#loginPopup {
+    display: none;
+    /* Estilos para la ventana emergente */
+}
+.error {
+    color: red;
+}
+.success {
+    color:white;
+}
+.popup-content {
+    background-color: #0909ef; /* Fondo azul para el contenido de la ventana */
+    margin: 15% auto; /* Centra la ventana verticalmente */
+    padding: 40px; /* Espaciado interno */
+    border: 1px solid #888; /* Borde gris */
+    width: 80%; /* Ancho del contenido */
+    max-width: 300px; /* Ancho máximo del contenido */
+    text-align: center; /* Centra el texto */
+}
+input[type="text"] {
+    margin-bottom: 20px; /* Aumenta el espacio debajo del campo de usuario */
+}
+input[type="password"] {
+    margin-bottom: 20px; /* Aumenta el espacio debajo del campo de contraseña */
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
+    padding: 10px; /* Añade espaciado interno */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+
+}
+.close {
+    color: #fa0f0f; /* Color del botón de cerrar */
+    float: right; /* Alinea el botón a la derecha */
+    font-size: 28px; /* Tamaño de la fuente del botón */
+    font-weight: bold; /* Negrita */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Color del botón al pasar el ratón o enfocar */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+.error {
+    color: red; /* Color del mensaje de error */
+    margin-top: 10px; /* Espacio encima del mensaje de error */
+}
+
+    input[type="submit"]{
+right:100px;
+
+    }
+h1{
+color: white;
+}
+.body1{
+ background-image: url('/img/pexels1.jpg'); /*Agregar imagen de fondo a body*/
+background-size: cover; /*Ajustar la imagen a la pagina*/
+ background-position: center;/*Coloc la imagen en el centro de la pagina*/
+background-repeat: no-repeat;
+}
+.div1{
+margin: 100;
+}
+video{
+    background-position:center;
+    max-width: 100%;
+}
+label{
+    color: white;
+}
+h3{
+    color: white;
+}
+h2{
+    color: white;
+}
+p{
+    color: white;
+}
+.navbar{
+    background-color: gray; /*color de la barra de menú*/
+}
+.navbar ul{
+    padding: 0; /*Elimina el padding de la lista*/
+    list-style-type: none;    /*Eliminar puntos de la lista */
+    margin: 0; /*Eliminael margen de la lista*/
+    display: flex; /* Organizar los elementos horizontalmente*/
+}
+.navbar li{
+    flex: 1; /*Hace q cada elemento de la lista ocupe el mismo epacio*/ 
+}
+.navbar a{
+    display: block; /*Hace que el enlace ocupe todo el esacio del elemento de la lista*/
+    text-align: center; /*Centra el texto dentro del enlace*/
+    color: white;
+    padding: 10px 10px; /*Espaciado interno*/
+    text-decoration: none; /*Elimna el espaciado de los elementos*/
+}
+.navbar a:hover{
+    background-color: blue;/*Cambial el color de fondo al pasar el ouse encima*/
+} 
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    transition: top 0.3s; /* Transición suave al cambiar la posición */
+    width: 100%; /* Ancho completo */
+    position: relative;
+}
+.auto{
+    color: blue;
+}
+.google{
+    color: white;
+}
+.video1{ 
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    height: auto;
+}
+
+.mailto{
+    color: white;
+}
+@media (max-width: 600px) {
+    /* Estilos para dispositivos móviles */
+    body {
+        font-size: 14px;
+        overflow-x: hidden; 
+    }
+    .container {
+     width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+          max-width: 600px; /* Limita el ancho máximo si es necesario */
+            margin: 0 auto; /* Centra el contenedor */
+        }
+        input{
+            background-color:white;
+        }
+    }
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    body {
+        font-size: 16px; /* Aumenta el tamaño de fuente en tabletas y laptops */
+    }
+    .campo {
+        width: 80%; /* Ajusta el ancho en pantallas medianas */
+    }
+}
+
+@media (min-width: 1201px) {
+    body {
+        font-size: 18px; /* Aumenta el tamaño de fuente en pantallas grandes */
+    }
+    .campo {
+        width: 60%; /* Ajusta el ancho en pantallas grandes */
+    }
+}
+.inicio{
+    margin-bottom: 15px;
+    display: flex;
+   flex-direction: column; 
+}
+.usuario{
+    width:250px;
+}
+.contraseña{
+    width: 250px;
+}
+.Registro{
+    margin-bottom: 15px;
+    display: flex;
+   flex-direction: column; 
+}
+.texto{
+    width: 250px;
+}
+.Contrasenia{
+    width: 250px;
+}
+.email1{
+    width: 250px;
+}
+.pais{
+    background-color: white;
+}
+.register-button {
+    background-color:transparent; /* Color de fondo Transparente */
+    border: none; /* Sin borde */
+    color: white; /* Texto en blanco */
+    padding: 15px 32px; /* Relleno del botón */
+    text-align: center; /* Texto centrado */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 4px 2px; /* Margen alrededor del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 12px; /* Bordes redondeados */
+    position: absolute; /* Posicionamiento absoluto */
+            top: 10px; /* Distancia desde la parte superior */
+            right: 10px; /* Distancia desde la parte derecha */
+}
+/* Estilo del ícono dentro del botón */
+.register-button img {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    vertical-align: middle; /* Alineación vertical del ícono */
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar {  
+    position: fixed;  
+    width: 300px;  
+    height: 100%;  
+    right: -300px; /* Inicialmente fuera de la pantalla */  
+    top: 0;  
+    background-color: #f4f4f4;  
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);  
+    transition: right 0.3s ease; /* Efecto de transición */  
+    padding: 20px;  
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */  
+}  
+
+.sidebar.open {  
+    right: 0; /* Cuando está abierta */  
+}  
+
+.close-btn {  
+    background: none;  
+    border: none;  
+    font-size: 24px;  
+    cursor: pointer;  
+}  
+
+form {  
+    display: flex;  
+    flex-direction: column;  
+}  
+
+label {  
+    margin-top: 10px;  
+}  
+
+input {  
+    padding: 8px;  
+    margin-top: 5px;  
+}  
+
+button[type="submit"] {  
+    margin-top: 20px;  
+    padding: 10px;  
+    cursor: pointer;
+}
+</style>
