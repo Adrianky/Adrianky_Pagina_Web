@@ -1,8 +1,7 @@
 
-    body{
-        font-family: Arial, sans-serif; /* Define la fuente del cuerpo del documento */
-
-    }
+body{
+    font-family: Arial, sans-serif; /* Define la fuente del cuerpo del documento */
+}
 
 .popup {
     display: none; /* Oculta la ventana emergente por defecto */
