@@ -36,28 +36,6 @@ function checkLoginStatus() {
         document.getElementById('loginPopup').style.display = 'none';
     }
 }
-
-document.getElementById('loginButton').addEventListener('click', function(event) {
-    event.preventDefault();
-    if (validateLogin(event)) {
-        window.open('', '_self', '');
-        window.close();
-    }
-});
-
-document.getElementById('closeButton').addEventListener('click', function() {
-    closePopup();
-    // Redirigir al usuario a la ventana de inicio de sesión si no está autenticado
-    if (!sessionStorage.getItem('loggedIn')) {
-        document.getElementById('loginPopup').style.display = 'block';
-    }
-});
-
-// Redirigir al usuario a la ventana de inicio de sesión si intenta acceder a la página sin estar autenticado
-if (!sessionStorage.getItem('loggedIn')) {
-    document.getElementById('loginPopup').style.display = 'block';
-}
-
 document.getElementById("loginBtn").addEventListener("click", function() {  
     document.getElementById("sidebar").classList.toggle("open");  
 });  
@@ -73,8 +51,4 @@ window.addEventListener('click', function(event) {
     if (!sidebar.contains(event.target) && !loginBtn.contains(event.target)) {  
         sidebar.classList.remove("open");  
     }  
-});
-document.getElementById("loginBtn").addEventListener("click", function() {  
-    console.log('Botón de iniciar sesión clickeado'); // Verifica que este mensaje se muestre en la consola  
-    document.getElementById("sidebar").classList.toggle("open");  
 });
