@@ -13,7 +13,7 @@ body{
     height: 100%; /* Alto completo de la pantalla */
     overflow: auto; /* Permite el desplazamiento si el contenido es grande */
     background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
-    
+    tranform:translated(-50%,-50%);
 }
 #loginPopup {
     display: none;
@@ -26,6 +26,7 @@ body{
     color:white;
 }
 .popup-content {
+ 
     background-color: #0909ef; /* Fondo azul para el contenido de la ventana */
     margin: 15% auto; /* Centra la ventana verticalmente */
     padding: 40px; /* Espaciado interno */
@@ -33,6 +34,7 @@ body{
     width: 80%; /* Ancho del contenido */
     max-width: 300px; /* Ancho máximo del contenido */
     text-align: center; /* Centra el texto */
+   
 }
 input[type="text"] {
     margin-bottom: 20px; /* Aumenta el espacio debajo del campo de usuario */
@@ -97,22 +99,20 @@ h2{
 p{
     color: white;
 }
-.navbar{
-    background-color: gray; /*color de la barra de menú*/
-}
+
 .navbar ul{
     padding: 0; /*Elimina el padding de la lista*/
     list-style-type: none;    /*Eliminar puntos de la lista */
     margin: 0; /*Eliminael margen de la lista*/
     display: flex; /* Organizar los elementos horizontalmente*/
 }
-.navbar li{
+.navbar li {
     flex: 1; /*Hace q cada elemento de la lista ocupe el mismo epacio*/ 
 }
 .navbar a{
     display: block; /*Hace que el enlace ocupe todo el esacio del elemento de la lista*/
     text-align: center; /*Centra el texto dentro del enlace*/
-    color: white;
+    color: black;
     padding: 10px 10px; /*Espaciado interno*/
     text-decoration: none; /*Elimna el espaciado de los elementos*/
 }
@@ -120,7 +120,10 @@ p{
     background-color: blue;/*Cambial el color de fondo al pasar el ouse encima*/
 } 
 .navbar {
-    background-color: #333;
+    display:flex;
+    align-items:center;
+    height:60px;
+    background-color:white;
     padding: 15px;
     transition: top 0.3s; /* Transición suave al cambiar la posición */
     width: 100%; /* Ancho completo */
