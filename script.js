@@ -52,3 +52,28 @@ window.addEventListener('click', function(event) {
         sidebar.classList.remove("open");  
     }  
 });
+setTimeout(() => {  
+    document.navbar.style.animation = 'none';
+}, 30000);
+const container = document.querySelector('.carousel-container');  
+        
+        // Duplicar las imágenes para el efecto circulante  
+        const images = document.querySelectorAll('.car-image');  
+        images.forEach(img => {  
+            const clone = img.cloneNode(true);  
+            container.appendChild(clone);  
+        });  
+        
+        // Cambiar la duración de la animación en función de la cantidad de imágenes  
+        const totalImages = images.length;  
+        container.style.animationDuration = `${totalImages * 2 + 4}s`; // Ajusta la duración  
+
+        // Ajustar la distancia final para coincidir con el desplazamiento  
+        const calculateWidth = () => {  
+            const imageWidth = 100; // ancho de las imágenes  
+            const margin = 20; // margen entre imágenes  
+            return (totalImages * (imageWidth + margin)) + 'px';  
+        };  
+        
+        // Cambia el ancho del contenedor de la animación  
+        container.style.width = calculateWidth();  

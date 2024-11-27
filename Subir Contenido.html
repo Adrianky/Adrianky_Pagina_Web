@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos y Videos</title>
+    <link rel="stylesheet" href="styles Subir_Contenido.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#fotos">Fotos</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#recuerdos">Otros Contenidos</a></li>
+        </ul>
+    </nav>
+    <h1>Subir Fotos y Videos</h1>
+    <form id="uploadForm">
+        <label for="fileInput">Selecciona una imagen o video:</label>
+        <input type="file" id="fileInput" accept="image/*,video/*">
+        <button type="button" onclick="uploadFile()">Subir</button>
+    </form>
+    <div id="gallery"></div>
+    <script src="scripts Subir_Contenido.js"></script>
+</body>
+</html>
