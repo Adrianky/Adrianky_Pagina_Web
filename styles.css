@@ -404,6 +404,10 @@ a{
     width: 80%;
     margin: 0 auto;
 }
+img {  
+    max-width: 100%; /* Asegura que las imágenes no salgan del contenedor */  
+    height: auto; /* Mantiene la proporción */  
+}  
 
 /* Estilos para pantallas medianas (laptops) */
 @media (max-width: 3000px) {
@@ -425,14 +429,11 @@ a{
     }
 }
 
-/* Estilos para móviles */
-@media (max-width: 280px) {
-    .container {
-        width: 100%;
-    }
-
-    body {
-        font-size: 12px;
+/* Estilos para móviles */  
+@media (max-width: 768px) { /* Cambiado de 280px a 768px para cubrir más dispositivos */  
+    .container {  
+        width: 100%;  
+        padding: 0 10px; /* Agrega un poco de margen */  
+        box-sizing: border-box; /* Asegura que el padding no sume al width */  
     }
 }
-
