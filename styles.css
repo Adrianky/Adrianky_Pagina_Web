@@ -251,39 +251,6 @@ p{
 .mailto{
     color: white;
 }
-@media (max-width: 600px) {
-    /* Estilos para dispositivos móviles */
-    body {
-        font-size: 14px;
-        overflow-x: hidden; 
-    }
-    .container {
-     width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-          max-width: 600px; /* Limita el ancho máximo si es necesario */
-            margin: 0 auto; /* Centra el contenedor */
-        }
-        input{
-            background-color:white;
-        }
-    }
-
-@media (min-width: 601px) and (max-width: 1200px) {
-    body {
-        font-size: 16px; /* Aumenta el tamaño de fuente en tabletas y laptops */
-    }
-    .campo {
-        width: 80%; /* Ajusta el ancho en pantallas medianas */
-    }
-}
-
-@media (min-width: 1201px) {
-    body {
-        font-size: 18px; /* Aumenta el tamaño de fuente en pantallas grandes */
-    }
-    .campo {
-        width: 60%; /* Ajusta el ancho en pantallas grandes */
-    }
-}
 .inicio{
     margin-bottom: 15px;
     display: flex;
@@ -433,5 +400,24 @@ footer {
 a{
     text-color: white;
 }
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
 
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    body {
+        font-size: 12px;
+    }
+}
 
