@@ -1,6 +1,6 @@
 const users = {  
     'Adrianky': 'Andis1234',  
-
+    // Añade más usuarios aquí si lo necesitas  
 };  
 
 function login(event) {  
@@ -11,8 +11,8 @@ function login(event) {
 
     if (users[username] && users[username] === password) {  
         // Redirige al archivo HTML deseado  
-        window.location.href = 'inicio.html'; // Cambia a tu archivo deseado  
+        window.location.href = 'index.html'; // Cambia a tu archivo deseado  
     } else {  
         alert('Credenciales inválidas. Por favor, intenta de nuevo.');  
     }  
-}  
+}
