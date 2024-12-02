@@ -1,7 +1,4 @@
-// Redirigir a inicio.html al cargar la página  
-window.onload = function() {  
-    window.location.href = 'inicio.html'; // Cambia a tu archivo deseado  
-};
+
 const validUsername = "Adrianky";
 const validPassword = "Andis1234";
 
