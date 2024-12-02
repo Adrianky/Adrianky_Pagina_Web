@@ -2,30 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Fotos y Videos</title>
-    <link rel="stylesheet" href="styles Subir_Contenido.css">
+    <title>Subir Elementos</title>
 </head>
-<body class="body2">
-    <nav>
-        <ul>
-            <li><a href="#fotos">Fotos</a></li>
-            <li><a href="#videos">Videos</a></li>
-            <li><a href="#recuerdos">Otros Contenidos</a></li>
-        </ul>
-    </nav>
-    <h1>Subir Fotos y Videos</h1>
-    <form id="uploadForm" action="upload.php" method="POST" enctype="multipart/form-data">
-        <label for="fileInput">Selecciona una imagen o video:</label>
-        <input type="file" id="fileInput" accept="image/*,video/*">
-        <button type="button" onclick="uploadFile()">Subir</button>
+<body>
+    <form action="/ruta_de_subida" method="post" enctype="multipart/form-data">
+        <label for="fileUpload">Selecciona el archivo:</label>
+        <input type="file" id="fileUpload" name="fileUpload" required>
+        
+        <label for="deviceType">Selecciona el tipo de dispositivo:</label>
+        <select id="deviceType" name="deviceType" required>
+            <option value="PC">PC</option>
+            <option value="Laptops">Laptops</option>
+            <option value="Tablet">Tablet</option>
+            <option value="DiscoDuro">Disco Duro</option>
+            <option value="Memorias">Memorias</option>
+        </select>
+        
+        <button type="submit">Subir</button>
     </form>
-   
-    <div id="gallery">  
-        <?php include 'gallery.php'; ?> <!-- Aquí se muestra la galería -->  
-    </div> 
-
-    <div id="gallery"></div>
-    <script src="scripts Subir_Contenido.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ body,html{
 .header{
     color:white;
     position:relative;
-    top: -23px;
+    top: -5px;
     background-color: rgba(0, 0, 130, 2.5);
 width: 100%;
 margin:0;
@@ -87,6 +87,21 @@ text-align:center;
     text-items:flex-end;
     flex: 1 1 30%; /* Creando una columna que ocupa 30% del ancho */  
 }
+.elemento6{
+    position: relative;
+    display: flex;
+    top:1370px;
+    margin:-1022px;
+    background-color:white;
+    width:200px;
+    height:200px;
+    border: 0.2px solid #000;
+    border-radius:5%;
+    text-align:center;
+    justify-content: flex-start;
+    text-items:flex-end;
+    flex: 1 1 30%; /* Creando una columna que ocupa 30% del ancho */  
+}
 .enlace {
     position: absolute;
     left: 50%;
@@ -127,6 +142,14 @@ text-align:center;
     text-decoration: none; /* Elimina el subrayado */
     align-items:flex-end;
 }
+.enlace5 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-decoration: none; /* Elimina el subrayado */
+    align-items:flex-end;
+}
 .img-1{
     position: absolute;
     top:25%;
@@ -158,3 +181,135 @@ text-decoration: none; /* Elimina el subrayado */
         .img-1 {  
             max-width: 100%; /* Asegúrate de que la imagen se ajuste al contenedor */  
         }
+        h1{
+            margin-top:0;
+            text-align: center;
+            color:rgba(0, 0, 130, 2.5);
+        
+        }
+
+        /* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 30%;
+    top: 150px;
+    width: 80%;
+    height: 70%;
+    overflow: auto;
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 0;
+    border-radius:0;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.modal-content {
+    top:0;
+    background-color:white ;
+    margin: 10% auto;
+    padding: 0;
+    width: 90%;
+    height:150px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+.H1{
+    position:relative;
+    width: 100%;
+    background-color:rgba(0, 0, 130, 2.5);
+    top:0;
+    margin:0;
+    box-sizing: border-box;
+    padding:0;
+    left: 0;
+    right: 0;
+}
+h1 {
+   color:white;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+/* Media queries para pantallas pequeñas */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+    .elemento1{
+        top:10px;
+        flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
+        margin: 5px;
+        width:100px;
+    height:100px;
+    }
+    .elemento2{
+        top:95px;
+        flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
+        margin: 5px;
+        width:100px;
+    height:100px;
+    margin:-80px;
+    
+    }
+    .elemento3{
+        top:-355px;
+        flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
+        margin: 5px;
+        width:100px;
+    height:100px;
+    margin:250px;
+    
+    }
+    .elemento4{
+        top:210px;
+        flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
+        margin: 5px;
+        width:100px;
+    height:100px;
+    margin:-207px;
+    
+    }
+    .elemento5{
+        top:-740px;
+        flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
+        margin: 5px;
+        width:100px;
+    height:100px;
+    margin:133px;
+    
+    }
+    .elemento6{
+        top:-640px;
+        flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
+        margin: 5px;
+        width:100px;
+    height:100px;
+    margin:37px;
+    
+    }
+    .modal {
+        left: 10%;
+        h1{
+            font-size:20px;
+        }
+    }
+}

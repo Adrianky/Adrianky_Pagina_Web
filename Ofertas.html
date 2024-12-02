@@ -44,6 +44,41 @@
             </a>
             <a href="#" class="enlace4"><h2>Memorias</h2></a>
         </div>
+        <div  id="uploadContainer" class="elemento6">
+            <a class="img-1" href="#">
+                <img src="Laptos/add.png" alt="Icono de laptos" class="img-6">
+            </a>
+            <a href="#" class="enlace5"><h2>Nuevos</h2></a>
+        </div>
     </div>
+
+
+    <div id="uploadModal" class="modal">
+        <div class="H1"><h1>Subir Contenido en LuxPC</h1> </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="/ruta_de_subida" method="post" enctype="multipart/form-data">
+                <label for="fileUpload"><h2>Selecciona la foto del contenido:</h2></label>
+                <input type="file" id="fileUpload" name="fileUpload" required accept="image/*">
+                <img id="imagenPrevisualizacion" src="" alt="Vista previa" style="max-width: 100px; max-height: 100px;">
+                <label for="price"><h2>Precio del contenido:</h2></label>
+                <input type="number" id="price" name="price" required>
+                
+                <label for="deviceType"><h2>Selecciona el tipo de dispositivo:</h2></label>
+                <select id="deviceType" name="deviceType" required>
+                    <option value="PC">PC</option>
+                    <option value="Laptops">Laptops</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="DiscoDuro">Disco Duro</option>
+                    <option value="Memorias">Memorias</option>
+                </select>
+                
+                <button type="submit"><strong>Subir</strong></button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="ofertas.js"></script><!--Para que html reconozca a java script-->
 </body>
 </html>
