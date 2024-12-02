@@ -433,7 +433,7 @@ img {
 @media (max-width: 768px) { /* Cambiado de 280px a 768px para cubrir más dispositivos */  
     .container {  
         width: 100%;  
-        padding: 0 10px; /* Agrega un poco de margen */  
+        padding: 0 5px; /* Agrega un poco de margen */  
         box-sizing: border-box; /* Asegura que el padding no sume al width */  
     }
 }
