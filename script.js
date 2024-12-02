@@ -2,32 +2,6 @@
 const validUsername = "Adrianky";
 const validPassword = "Andis1234";
 
-window.onload = function() {
-    checkLoginStatus();
-};
-
-function closePopup() {
-    // Cerrar la ventana de inicio de sesión
-    document.getElementById('loginPopup').style.display = 'none';
-}
-
-function validateLogin(event) {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const errorMessage = document.getElementById('errorMessage');
-
-    if (username === validUsername && password === validPassword) {
-        errorMessage.textContent = "Inicio de sesión exitoso";
-        errorMessage.className = "success";
-        sessionStorage.setItem('loggedIn', true);
-        closePopup();
-        return true;
-    } else {
-        errorMessage.textContent = "Credenciales inválidas";
-        errorMessage.className = "error";
-        return false;
-    }
-}
 
 function checkLoginStatus() {
     if (!sessionStorage.getItem('loggedIn')) {
@@ -76,4 +50,10 @@ const container = document.querySelector('.carousel-container');
         };  
         
         // Cambia el ancho del contenedor de la animación  
-        container.style.width = calculateWidth();  
+        container.style.width = calculateWidth();
+          
+        document.getElementById('inicio').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplaza suavemente hasta la parte superior
+        });
+

@@ -1,0 +1,160 @@
+body,html{
+    padding:0;
+    margin:0;
+}
+.header{
+    color:white;
+    position:relative;
+    top: -23px;
+    background-color: rgba(0, 0, 130, 2.5);
+width: 100%;
+margin:0;
+padding:0;
+text-align:center;
+}
+.elemento1{
+    position: relative;
+    display: flex;
+    top:80px;
+    margin:30px;
+    background-color:white;
+    width:200px;
+    height:200px;
+    border: 0.2px solid #000;
+    border-radius:5%;
+    text-align:center;
+    justify-content: center;
+    text-items:flex-end;
+    flex: 1 1 30%; /* Creando una columna que ocupa 30% del ancho */  
+}
+.elemento2{
+    position: relative;
+    display: flex;
+    top:50px;
+    margin:60px;
+    background-color:white;
+    width:200px;
+    height:200px;
+    border: 0.2px solid #000;
+    border-radius:5%;
+    text-align:center;
+    justify-content: center;
+    text-items:flex-end;
+    flex: 1 1 30%; /* Creando una columna que ocupa 30% del ancho */  
+}
+.elemento3{
+    position: relative;
+    display: flex;
+    top:20px;
+    margin:90px;
+    background-color:white;
+    width:200px;
+    height:200px;
+    border: 0.2px solid #000;
+    border-radius:5%;
+    text-align:center;
+    justify-content: center;
+    text-items:flex-end;
+    flex: 1 1 30%; /* Creando una columna que ocupa 30% del ancho */  
+}
+.elemento4{
+    position: relative;
+    display: flex;
+    top:-10px;
+    margin:120px;
+    background-color:white;
+    width:200px;
+    height:200px;
+    border: 0.2px solid #000;
+    border-radius:5%;
+    text-align:center;
+    justify-content: center;
+    text-items:flex-end;
+    flex: 1 1 30%; /* Creando una columna que ocupa 30% del ancho */  
+}
+.elemento5{
+    position: relative;
+    display: flex;
+    top:-40px;
+    margin:150px;
+    background-color:white;
+    width:200px;
+    height:200px;
+    border: 0.2px solid #000;
+    border-radius:5%;
+    text-align:center;
+    justify-content: center;
+    text-items:flex-end;
+    flex: 1 1 30%; /* Creando una columna que ocupa 30% del ancho */  
+}
+.enlace {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-decoration: none; /* Elimina el subrayado */
+    align-items:flex-end;
+}
+.enlace1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-decoration: none; /* Elimina el subrayado */
+    align-items:flex-end;
+}
+.enlace2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-decoration: none; /* Elimina el subrayado */
+    align-items:flex-end;
+}
+.enlace3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-decoration: none; /* Elimina el subrayado */
+    align-items:flex-end;
+}
+.enlace4 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    text-decoration: none; /* Elimina el subrayado */
+    align-items:flex-end;
+}
+.img-1{
+    position: absolute;
+    top:25%;
+    left: 50%;
+    transform: translate(-50%, -25%); /* Ajusta la posición para centrar */
+}
+
+.Contanier-elementos{
+    margin-left:20px;
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta el tamaño mínimo de las columnas */  
+    gap: 10px; /* Espacio entre las columnas */ 
+}
+a{
+text-decoration: none; /* Elimina el subrayado */
+        }
+        
+        .Contanier-elementos > div {  
+            border: 1px solid #000; /* Borde para diferenciar los contenedores */  
+          
+            text-align: center; /* Centrar el contenido */  
+            transition: transform 0.3s; /* Suaviza la transición */  
+        }  
+        
+        .Contanier-elementos > div:hover {  
+            transform: scale(1.1); /* Escala el contenedor al pasar el cursor */  
+        }  
+        
+        .img-1 {  
+            max-width: 100%; /* Asegúrate de que la imagen se ajuste al contenedor */  
+        }
