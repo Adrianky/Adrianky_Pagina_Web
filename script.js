@@ -40,7 +40,7 @@ const container = document.querySelector('.carousel-container');
         
         // Cambiar la duración de la animación en función de la cantidad de imágenes  
         const totalImages = images.length;  
-        container.style.animationDuration = `${totalImages * 2 + 4}s`; // Ajusta la duración  
+        container.style.animationDuration = `${totalImages * 1 + 2}s`; // Ajusta la duración  
 
         // Ajustar la distancia final para coincidir con el desplazamiento  
         const calculateWidth = () => {  
