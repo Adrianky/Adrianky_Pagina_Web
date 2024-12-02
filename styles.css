@@ -54,7 +54,7 @@ html, body {
     display: flex;  
     margin-top: 100px;
     width: calc(100% * 20); /* Duplicamos el número de imágenes */  
-    animation: scroll 10s linear infinite;
+    animation: scroll 0.5s linear infinite;
     white-space: nowrap; /* Evita que las imágenes se agrupen */
     position:relative;
     aling-items: center; 
