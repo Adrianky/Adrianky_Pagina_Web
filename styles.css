@@ -400,6 +400,16 @@ footer {
 a{
     text-color: white;
 }
+/* Estilos para pantallas medianas (laptops) */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
 @media (max-width: 768px) {
     .container {
         width: 90%;
