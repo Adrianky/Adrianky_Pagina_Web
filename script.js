@@ -27,7 +27,6 @@ window.addEventListener('click', function(event) {
         sidebar.classList.remove("open");  
     }  
 });
-
 setTimeout(() => {  
     document.navbar.style.animation = 'none';
 }, 30000);
@@ -59,8 +58,4 @@ const container = document.querySelector('.carousel-container');
             window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplaza suavemente hasta la parte superior
         });
         
-         const isAuthenticated = false; // Cambia esto según tu lógica de autenticación
-
-        if (!isAuthenticated) {
-            window.location.href = 'inicio.html'; // Redirige a la página de inicio de sesión
-        }
+    
