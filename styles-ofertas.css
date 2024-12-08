@@ -257,17 +257,17 @@ h1 {
     .elemento1{
         top:10px;
         flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
-        margin: 5px;
+        margin: 0;
         width:100px;
     height:100px;
     }
     .elemento2{
-        top:95px;
+        top:-230px;
         flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
         margin: 5px;
         width:100px;
     height:100px;
-    margin:-80px;
+    margin:130px;
     
     }
     .elemento3{
@@ -276,34 +276,34 @@ h1 {
         margin: 5px;
         width:100px;
     height:100px;
-    margin:250px;
+    margin:0;
     
     }
     .elemento4{
-        top:210px;
+        top:-350px;
         flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
         margin: 5px;
         width:100px;
     height:100px;
-    margin:-207px;
+    margin:2px;
     
     }
     .elemento5{
-        top:-740px;
+        top:-710px;
         flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
         margin: 5px;
         width:100px;
     height:100px;
-    margin:133px;
+    margin:131px;
     
     }
     .elemento6{
-        top:-640px;
+        top:-963px;
         flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
         margin: 5px;
         width:100px;
     height:100px;
-    margin:37px;
+    margin:130px;
     
     }
     .modal {
