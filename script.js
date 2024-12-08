@@ -56,4 +56,9 @@ const container = document.querySelector('.carousel-container');
             event.preventDefault(); // Evita el comportamiento predeterminado del enlace
             window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplaza suavemente hasta la parte superior
         });
+        
+         const isAuthenticated = false; // Cambia esto según tu lógica de autenticación
 
+        if (!isAuthenticated) {
+            window.location.href = 'inicio-sesion.html'; // Redirige a la página de inicio de sesión
+        }
