@@ -255,6 +255,7 @@ h1 {
         width: 90%;
     }
     .elemento1{
+        font-size:10px;
         top:10px;
         flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
         margin: 0;
@@ -262,16 +263,18 @@ h1 {
     height:100px;
     }
     .elemento2{
-        top:-230px;
+        font-size:10px;
+        top:-280px;
         flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
         margin: 5px;
         width:100px;
     height:100px;
-    margin:130px;
+    margin:180px;
     
     }
     .elemento3{
-        top:-355px;
+        font-size:10px;
+        top:-440px;
         flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
         margin: 5px;
         width:100px;
@@ -280,7 +283,8 @@ h1 {
     
     }
     .elemento4{
-        top:-350px;
+        font-size:10px;
+        top:-420px;
         flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
         margin: 5px;
         width:100px;
@@ -289,21 +293,23 @@ h1 {
     
     }
     .elemento5{
-        top:-710px;
+        font-size:10px;
+        top:-845px;
         flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
         margin: 5px;
         width:100px;
     height:100px;
-    margin:131px;
+    margin:179px;
     
     }
     .elemento6{
-        top:-963px;
+        font-size:10px;
+        top:-1180px;
         flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */  
         margin: 5px;
         width:100px;
     height:100px;
-    margin:130px;
+    margin:177px;
     
     }
     .modal {
