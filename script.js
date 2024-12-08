@@ -10,6 +10,7 @@ function checkLoginStatus() {
         document.getElementById('loginPopup').style.display = 'none';
     }
 }
+
 document.getElementById("loginBtn").addEventListener("click", function() {  
     document.getElementById("sidebar").classList.toggle("open");  
 });  
@@ -18,7 +19,7 @@ document.getElementById("closeBtn").addEventListener("click", function() {
     document.getElementById("sidebar").classList.remove("open");  
 });  
 
-// Cerrar la barra lateral al hacer clic fuera de ella  
+// Cerrar la barra lateral al hacer clic fuera de ella...
 window.addEventListener('click', function(event) {  
     const sidebar = document.getElementById("sidebar");  
     const loginBtn = document.getElementById("loginBtn");  
@@ -26,6 +27,7 @@ window.addEventListener('click', function(event) {
         sidebar.classList.remove("open");  
     }  
 });
+
 setTimeout(() => {  
     document.navbar.style.animation = 'none';
 }, 30000);
@@ -60,5 +62,5 @@ const container = document.querySelector('.carousel-container');
          const isAuthenticated = false; // Cambia esto según tu lógica de autenticación
 
         if (!isAuthenticated) {
-            window.location.href = 'inicio-sesion.html'; // Redirige a la página de inicio de sesión
+            window.location.href = 'inicio.html'; // Redirige a la página de inicio de sesión
         }
